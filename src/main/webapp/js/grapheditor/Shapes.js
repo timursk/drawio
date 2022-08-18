@@ -3381,6 +3381,25 @@
 
 	mxCellRenderer.registerShape('or', OrShape);
 
+	// OrMirrored
+	function OrMirroredShape()
+	{
+		mxActor.call(this);
+	};
+
+	mxUtils.extend(OrMirroredShape, mxActor);
+
+	OrMirroredShape.prototype.redrawPath = function(c, x, y, w, h)
+	{
+		c.moveTo(w, 0);
+		c.quadTo(0, 0, 0, h / 2);
+		c.quadTo(0, h, w, h);
+		c.close();
+		c.end();
+	};
+
+	mxCellRenderer.registerShape('ormirrored', OrMirroredShape);
+
 	// Xor
 	function XorShape()
 	{
