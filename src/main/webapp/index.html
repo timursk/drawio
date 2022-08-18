@@ -245,10 +245,12 @@
 		if (urlParams['dev'] == '1')
 		{
 			// Used to request grapheditor/mxgraph sources in dev mode
-			var mxDevUrl = document.location.protocol + '//devhost.jgraph.com/drawio/src/main';
+			// var mxDevUrl = document.location.protocol + '//devhost.jgraph.com/drawio/src/main';
+			var mxDevUrl = document.location.protocol + '//' + document.location.host + '/drawio/src/main/webapp';
 			
 			// Used to request draw.io sources in dev mode
-			var drawDevUrl = document.location.protocol + '//devhost.jgraph.com/drawio/src/main/webapp/';
+			// var drawDevUrl = document.location.protocol + '//devhost.jgraph.com/drawio/src/main/webapp/';
+			var drawDevUrl = document.location.protocol + '//' + document.location.host + '/drawio/src/main/webapp/';
 			var geBasePath = drawDevUrl + '/js/grapheditor';
 			var mxBasePath = mxDevUrl + '/mxgraph';
 			
@@ -440,6 +442,7 @@
 		</p>
 	</div>
 </div>
+<script type="text/javascript" src="./js/diagramly/App.js"></script>
 <script type="text/javascript">
 /**
  * Main
@@ -468,6 +471,7 @@ else
 	}
 	else
 	{
+    console.log('app main on');
 		App.main();
 	}
 }
