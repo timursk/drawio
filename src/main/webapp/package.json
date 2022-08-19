@@ -2,9 +2,10 @@
   "name": "draw.io",
   "version": "20.0.4",
   "description": "diagrams.net desktop",
-  "main": "electron.js",
+  "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "startDev": "cross-env DRAWIO_ENV=dev electron ."
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "commander": "^9.4.0",
     "compression": "^1.7.4",
     "crc": "^4.1.1",
+    "cross-env": "^7.0.3",
     "electron-log": "^4.4.8",
     "electron-progressbar": "^2.0.1",
     "electron-store": "^8.1.0",
